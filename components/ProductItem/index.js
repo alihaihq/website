@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './ProductItem.module.css';
 
 const ProductItem = ({ data }) => (
-  <Link href={`/products/${data.id}`}>
+  <Link href={`/products/${data.id}`} scroll={false}>
     <a>
       <Card
         hoverable
