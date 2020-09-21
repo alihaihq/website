@@ -1,3 +1,1 @@
-export const getApiEndpointURL = (path) => {
-  return `https://lab.rousan.io/alihai${path}`;
-};
+export const getApiEndpointURL = (path) => `https://lab.rousan.io/alihai${path}`;

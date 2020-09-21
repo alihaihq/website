@@ -1,66 +1,71 @@
-import React from "react";
-import { Form, Icon, Input, Button, Tooltip } from "antd";
-import styles from "./ContactUsForm.module.css";
+import React from 'react';
+import {
+  Form, Icon, Input, Button, Tooltip,
+} from 'antd';
+import styles from './ContactUsForm.module.css';
 
 class ContactUsForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.form.validateFields((err, values) => {
+
+    const { form, onSubmit } = this.props;
+
+    form.validateFields((err, values) => {
       if (!err) {
-        console.log("Received values of form: ", values);
-        this.props.onSubmit(values);
+        console.log('Received values of form: ', values);
+        onSubmit(values);
       }
     });
   };
 
   render() {
-    const { isLoading } = this.props;
-    const { getFieldDecorator } = this.props.form;
+    const { isLoading, form } = this.props;
+    const { getFieldDecorator } = form;
 
     return (
       <Form onSubmit={this.handleSubmit} className={styles.contactUsForm}>
         <Form.Item>
-          {getFieldDecorator("mobile", {
+          {getFieldDecorator('mobile', {
             rules: [
-              { required: true, message: "Please enter your contact number" },
+              { required: true, message: 'Please enter your contact number' },
             ],
           })(
             <Input
-              addonBefore={
+              addonBefore={(
                 <Tooltip title="You Contact Number">
-                  <Icon type="phone" style={{ color: "rgba(0,0,0,.25)" }} />
+                  <Icon type="phone" style={{ color: 'rgba(0,0,0,.25)' }} />
                 </Tooltip>
-              }
+              )}
               type="tel"
               placeholder="Your contact number"
-            />
+            />,
           )}
         </Form.Item>
         <Form.Item>
-          {getFieldDecorator("email", {
-            rules: [{ required: true, message: "Please enter your email" }],
+          {getFieldDecorator('email', {
+            rules: [{ required: true, message: 'Please enter your email' }],
           })(
             <Input
-              addonBefore={
+              addonBefore={(
                 <Tooltip title="You Email Address">
-                  <Icon type="mail" style={{ color: "rgba(0,0,0,.25)" }} />
+                  <Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />
                 </Tooltip>
-              }
+              )}
               type="email"
               placeholder="Your email"
-            />
+            />,
           )}
         </Form.Item>
         <Form.Item>
-          {getFieldDecorator("message", {
+          {getFieldDecorator('message', {
             rules: [
-              { required: true, message: "Please input your requirements!" },
+              { required: true, message: 'Please input your requirements!' },
             ],
           })(
             <Input.TextArea
               placeholder="Describe your requirements"
               style={{ height: 150 }}
-            />
+            />,
           )}
         </Form.Item>
         <Form.Item>
@@ -78,4 +83,4 @@ class ContactUsForm extends React.Component {
   }
 }
 
-export default Form.create({ name: "contact-form" })(ContactUsForm);
+export default Form.create({ name: 'contact-form' })(ContactUsForm);

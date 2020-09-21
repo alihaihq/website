@@ -1,0 +1,31 @@
+.products {
+  padding: 0;
+  margin: 0;
+}
+
+.productListContainer {
+  padding: 30px 100px;
+  margin-top: 50px;
+}
+
+ul.productList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.productItemContainer {
+  margin: 0 30px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  ul.productList {
+    justify-content: center;
+  }
+}

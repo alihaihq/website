@@ -1,14 +1,4 @@
-.home {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.main {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.hero {
+.headerBanner {
   height: 500px;
   background-image: radial-gradient(farthest-corner at -0% 100%, #7247ff 30%, #00ffbe 95%);
   background-size: 150% 150%;
@@ -22,6 +12,7 @@
   bottom: -1px;
   left: 0;
   width: 100%;
+  /* z-index: -1; */
 }
 
 .curveContainer .curve {
@@ -38,7 +29,7 @@
   margin-bottom: -3px;
 }
 
-.hero .content {
+.headerBanner .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -99,15 +90,16 @@
   font-weight: bold;
 }
 
-.heroButtonContainer {
+.mainButtonContainer {
   width: 200px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 90px;
+  text-align: center;
 }
 
-.heroButtonContainer a {
+.mainButtonContainer a {
   border-radius: 52px;
   font-weight: 500;
   background: #0099ffa3;
@@ -131,34 +123,8 @@
   transition: all 0.4321s;
 }
 
-.heroButtonContainer a:hover {
+.mainButtonContainer a:hover {
   background: #0d90e8;
-}
-
-.formContainer {
-  padding: 0 50px;
-}
-
-.contactFormPanel {
-  display: flex;
-  flex-direction: row;
-  width: 1200px;
-  margin: 200px auto;
-}
-
-.contactFormPanel .leftPanel {
-  flex: 1;
-  padding: 20px;
-}
-
-.contactFormPanel .rightPanel {
-  flex: 1;
-  padding: 0 20px;
-}
-
-.footer {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -179,18 +145,5 @@
   }
   .titleContainer .subtitle {
     font-size: 13px;
-  }
-  .contactFormPanel {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    flex-direction: column;
-    width: 100%;
-  }
-  .contactFormPanel .leftPanel {
-    padding: 0 40px;
-    margin-bottom: 40px;
-  }
-  .formContainer {
-    padding: 0 20px;
   }
 }
