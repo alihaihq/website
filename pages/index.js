@@ -92,7 +92,7 @@ const Home = () => {
             <Tooltip title="Send us mail">
               <Button
                 type="link"
-                href="mailto:alihaistore@gmail.com,hello@rousan.io"
+                href="mailto:sell@alihaistore.com"
                 icon="mail"
               />
             </Tooltip>

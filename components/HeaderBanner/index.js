@@ -21,9 +21,7 @@ const HeaderBanner = ({ buttonText, buttonURL }) => (
         <div className={styles.contactItem}>
           <Icon type="mail" style={{ marginRight: 5 }} />
           <div className={styles.contactList}>
-            <span>alihaistore@gmail.com</span>
-            <span>,&nbsp;</span>
-            <span>hello@rousan.io</span>
+            <span>sell@alihaistore.com</span>
           </div>
         </div>
       </div>
